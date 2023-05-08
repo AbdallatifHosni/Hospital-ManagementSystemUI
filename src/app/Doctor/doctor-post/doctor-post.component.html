@@ -1,0 +1,57 @@
+<div class="container-fluid ">
+  <form (ngSubmit)="onSubmit()" class=" row g-3 p-2 m-4  needs-validation" novalidate >
+    <div class="form-group">
+      <label for="doctorId">Dotocr ID:</label>
+      <input type="number" name="doctorId" id="doctorId" class="form-control" [(ngModel)]="doctor.doctorId" required>
+      <div class="invalid-feedback">Please enter a valid patient ID.</div>
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" class="form-control" [(ngModel)]="doctor.name" required>
+      <div class="invalid-feedback">Please enter a valid name.</div>
+
+    </div>
+
+    <div class="form-group">
+      <label for="gender">Gender:</label>
+      <select name="gender" id="gender" class="form-control" [(ngModel)]="doctor.gender" required>
+        <option value="" disabled selected>Select gender</option>
+        <option [value]="genderoptions.male">Male</option>
+        <option [value]="genderoptions.female">Female</option>
+      </select>
+      <div class="invalid-feedback">Please select a gender.</div>
+
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" class="form-control" [(ngModel)]="doctor.email" required>
+      <div class="invalid-feedback">Please enter a valid email address.</div>
+
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input type="tel" name="phone" id="phone" class="form-control" [(ngModel)]="doctor.phone" required>
+      <div class="invalid-feedback">Please enter a valid phone number.</div>
+
+    </div>
+    <div class="form-group">
+        <label for="position">Position:</label>
+        <input type="tel" name="position" id="position" class="form-control" [(ngModel)]="doctor.position" required>
+        <div class="invalid-feedback">Please enter a valid phone number.</div>
+  
+      </div>
+
+
+    <div class="form-group">
+      <label for="dialysisUnitId">Dialysis Unit ID:</label>
+      <input type="text" name="dialysisUnitId" id="dialysisUnitId" class="form-control" [(ngModel)]="doctor.dialysisunitId" required>
+      <div class="invalid-feedback">Please enter a valid dialysis unit ID.</div>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <div *ngIf="submitted" class="alert alert-success mt-3">Patient submitted successfully. </div>
+</form>
+
+</div>
+

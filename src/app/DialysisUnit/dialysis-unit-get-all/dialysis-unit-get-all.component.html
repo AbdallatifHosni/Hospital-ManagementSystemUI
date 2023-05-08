@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="table-responsive ">
+    <table class="table table-hover table-stripped table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Capacity</th>
+          <th>HospitalID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let unit of dialysisUnits">
+          <td>{{ unit.dialysisUnitId }}</td>
+          <td>{{ unit.name }}</td>
+          <td>{{ unit.capacity }}</td>
+          <td>{{ unit.hospitalId }}</td>
+          <td> <a [routerLink] = "['/DailysisUnits/getById',unit.dialysisUnitId]"> Details </a> </td>
+          <td><a [routerLink]="['/Hospitals/update/',unit.dialysisUnitId]">Update</a></td>
+          <td><a routerLink="['/Hospitals/delete/',unit.dialysisUnitId]">Delete</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

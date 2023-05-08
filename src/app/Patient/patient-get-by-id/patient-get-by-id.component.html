@@ -1,0 +1,31 @@
+<p>patient-get-by-id works!</p>
+<div class="container">
+    <h1>Patient In Details</h1>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>{{ patient.patientId }}</th>
+          <th>{{ patient.name }}</th>
+          <th>{{ patient.email }}</th>
+          <th>{{ patient.phone}}</th>
+          <th>{{ patient.gender}}</th> 
+          <th>{{ patient.city}}</th>
+          <th>{{ patient.country}}</th>
+          <th>{{ patient.dialysisUnitId}}</th>
+        </tr>
+      </thead>
+    </table>
+    <div>
+      <a  routerLink="/patients"> Back </a>
+    </div>
+  </div>
+/*/*  
+"patientId": 0,
+"name": "string",
+"gender": 0,
+"email": "string",
+"phone": "string",
+"country": "string",
+"city": "string",
+"dialysisUnitId":
+*/

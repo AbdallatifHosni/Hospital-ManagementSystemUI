@@ -1,0 +1,54 @@
+
+<h3> Post Hospital</h3>
+<div class="container g-3 mb
+
+
+-3">
+  <div class="row">
+    <form #hospitalForm="ngForm"  (ngSubmit)="onSubmit()" >
+          <div class="">
+            <label for="id" class="form-label">ID:</label>
+            <input type="number" id="id" name="ID" [(ngModel)]="hospital.id" class="form-control">
+          </div>
+          <div class="">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" id="name" name="name" [(ngModel)]="hospital.name" class="form-control">
+          </div>
+          <div class="">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" name="email" [(ngModel)]="hospital.email" #gemail="ngModel" class="form-control" email>
+            <span *ngIf="gemail.errors">hhhhhhhhhhhhhhh </span>
+            <span *ngIf="gemail.errors"> </span>
+          </div>
+          <div class="">
+            <label for="website" class="form-label">Website:</label>
+            <input type="text" id="website" name="website" [(ngModel)]="hospital.website" class="form-control">
+          </div>
+          <div class="">
+            <label for="country" class="form-label">Country:</label>
+            <input type="text" id="country" name="country" [(ngModel)]="hospital.country" class="form-control">
+          </div>
+          <div class="">
+            <label for="city" class="form-label">City:</label>
+            <input type="text" id="city" name="city" [(ngModel)]="hospital.city" class="form-control">
+          </div>
+          <div class="">
+            <label for="area" class="form-label">Area:</label>
+            <input type="text" id="area" name="area" [(ngModel)]="hospital.area" class="form-control">
+          </div>
+          <div class="">
+            <label for="phone1" class="form-label">Phone 1:</label>
+            <input type="tel" id="phone1" name="phone1" [(ngModel)]="hospital.phone1" class="form-control">
+          </div>
+          <div class="">
+            <label for="phone2" class="form-label">Phone 2:</label>
+            <input type="tel" id="phone2" name="phone2" [(ngModel)]="hospital.phone2" class="form-control">
+          </div>
+          <div class=" row  ">
+            <button type="submit" class="btn btn-primary btn-lg btn-block" >Add</button>
+          </div>
+    </form>
+    
+  </div>
+
+</div>

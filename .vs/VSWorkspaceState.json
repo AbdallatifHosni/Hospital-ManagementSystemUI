@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src\\app",
+    "\\src\\app\\Doctor",
+    "\\src\\app\\Hospital",
+    "\\src\\app\\Hospital\\hospital-post",
+    "\\src\\app\\Nurse"
+  ],
+  "PreviewInSolutionExplorer": true
+}

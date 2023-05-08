@@ -1,0 +1,29 @@
+<div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>City</th>
+          <th>Dialysis Unit ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let patient of patients">
+          <td>{{ patient.patientId }}</td>
+          <td>{{ patient.name }}</td>
+          <td>{{ patient.gender }}</td>
+          <td>{{ patient.email }}</td>
+          <td>{{ patient.phone }}</td>
+          <td>{{ patient.city }}</td>
+          <td>{{ patient.dialysisUnitId }}</td>
+          <td> <a [routerLink] = "['/patients/getById/',patient.patientId]"> Details </a> </td>
+          <td> <a [routerLink] = "['/patients/update/',patient.patientId]"> Update </a> </td>
+          <td> <a [routerLink] = "['/patients/delete/',patient.patientId]"> Delete </a> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

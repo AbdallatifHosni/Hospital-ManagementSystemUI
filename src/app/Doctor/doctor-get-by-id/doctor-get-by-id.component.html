@@ -1,0 +1,34 @@
+<h1>DoctorGetById</h1>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>DoctorId</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Phone</th>
+                <th>position</th>
+               <th> dialysisunitId</th>
+
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                    <td>{{ doctor.doctorId }}</td>
+                    <td>{{doctor.name }}</td>
+                    <td>{{ doctor.email }}</td>
+                    <td>{{ doctor.phone }}</td>
+                    <td>{{doctor.gender}} </td>
+                    <td>{{doctor.position }}</td>
+                    <td>{{doctor.dialysisunitId}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <div>
+        <a routerLink="/Doctors">Back</a>
+    </div>
+</div>
+

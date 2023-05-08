@@ -1,0 +1,31 @@
+<p>nurse-get-all works!</p>
+<div class="container-fluid">
+    <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Gender</th>
+            <th>dialysisUnitId</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let instance of nurses">
+            <td>{{ instance.id }}</td>
+            <td>{{ instance.name }}</td>
+            <td>{{ instance.email }}</td>
+            <td>{{ instance.phone }}</td>
+            <td>{{ instance.gender }}</td>
+            <td>{{ instance.dialysisUnitId }}</td>
+            <td><a [routerLink]="['/Nurses/getById',instance.id]">Details</a></td>
+            <td><a [routerLink]="['/Nurses/getById',instance.id]">Update</a></td>
+            <td><a [routerLink]= "['/Nurses/delete',instance.id]" >Delete</a></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+ 
+ 
