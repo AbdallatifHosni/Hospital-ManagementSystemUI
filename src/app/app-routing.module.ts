@@ -27,47 +27,53 @@ import { DoctorUpdateComponent } from './Doctor/doctor-update/doctor-update.comp
 import { DoctorDeleteComponent } from './Doctor/doctor-delete/doctor-delete.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { AuthGuard } from './Services/auth-guard.service';
+import { AuthRegistrationComponent } from './auth/auth-registration/auth-registration.component';
+import { AuthLoginComponent } from './auth/auth-login/auth-login.component';
 const routes: Routes = [
  {path:'',component:MainLayoutComponent ,children:[
-    {path:'Home',component:HomeComponent},
-    {path:'Hospitals', component: HospitalGetAllsComponent },
-    {path:'Hospitals/Post',component:HospitalPostComponent},
-    {path:'Hospitals/getById/:id',component:HospitalGetByIdComponent},
-    {path:'Hospitals/update/:id',component:HospitalUpdateComponent},
-    {path:'Hospitals/delete/:id',component:HospitalDeleteComponent},
-  
-    {path:'DailysisUnits',component:DialysisUnitGetAllComponent},
-    {path:'DailysisUnits/Post',component:DialysisUnitPostComponent},
-    {path:'DailysisUnits/getById/:id',component:DialysisUnitGetByIdComponent},
-  
-    {path:'patients' ,component: PatientGetAllComponent},
-    {path:'patients/getById/:id',component:PatientGetByIdComponent},
-    {path:'patients/Post',component:PatientPostComponent},
-    {path:'patients/update/:id',component:PatientUpdateComponent},
-    {path:'patients/delete/:id',component:PatientDeleteComponent},
+      {path:'Home',component:HomeComponent,canActivateChild:[AuthGuard],children:[
+        {path:'Hospitals', component: HospitalGetAllsComponent },
+        {path:'Hospitals/Post',component:HospitalPostComponent},
+        {path:'Hospitals/getById/:id',component:HospitalGetByIdComponent},
+        {path:'Hospitals/update/:id',component:HospitalUpdateComponent},
+        {path:'Hospitals/delete/:id',component:HospitalDeleteComponent},
+      
+        {path:'DailysisUnits',component:DialysisUnitGetAllComponent},
+        {path:'DailysisUnits/Post',component:DialysisUnitPostComponent},
+        {path:'DailysisUnits/getById/:id',component:DialysisUnitGetByIdComponent},
+      
+        {path:'patients' ,component: PatientGetAllComponent},
+        {path:'patients/getById/:id',component:PatientGetByIdComponent},
+        {path:'patients/Post',component:PatientPostComponent},
+        {path:'patients/update/:id',component:PatientUpdateComponent},
+        {path:'patients/delete/:id',component:PatientDeleteComponent},
+        
+        {path:'Nurses',component:NurseGetAllComponent},
+        {path:'Nurses/Post',component:NursePostComponent},
+        {path:'Nurses/getById/:id',component:GetByIdComponent},
+        {path:'Nurses/update/:id',component:NurseUpdateComponent},
+        {path:'Nurses/delete/:id',component:NurseDeleteComponent},
+      
+      
+      
+      
     
-    {path:'Nurses',component:NurseGetAllComponent},
-    {path:'Nurses/Post',component:NursePostComponent},
-    {path:'Nurses/getById/:id',component:GetByIdComponent},
-    {path:'Nurses/update/:id',component:NurseUpdateComponent},
-    {path:'Nurses/delete/:id',component:NurseDeleteComponent},
-  
-  
-  
-  
+      
+        {path:'Doctors',component:DoctorGetAllComponent},
+        {path:'Doctors/Post',component:DoctorPostComponent},
+        {path:'Doctors/getById/:id',component:DoctorGetByIdComponent},
+        {path:'Doctors/update/:id',component:DoctorUpdateComponent},
+        {path:'Doctors/delete/:id',component:DoctorDeleteComponent},
 
-  
-    {path:'Doctors',component:DoctorGetAllComponent},
-    {path:'Doctors/Post',component:DoctorPostComponent},
-    {path:'Doctors/getById/:id',component:DoctorGetByIdComponent},
-    {path:'Doctors/update/:id',component:DoctorUpdateComponent},
-    {path:'Doctors/delete/:id',component:DoctorDeleteComponent},
+
+      ]},
+
 
 
   ]},
-
-
-//  {path:'**',component:HomeComponent},
+  {path:'regx',component:AuthRegistrationComponent},
+  {path:'login',component:AuthLoginComponent},
+  {path:'**',component:HomeComponent},
  
 
 ];

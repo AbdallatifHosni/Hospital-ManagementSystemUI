@@ -1,4 +1,6 @@
 
+
+
 import { FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -54,7 +56,9 @@ import { ScheduleDeleteComponent } from './Schedule/schedule-delete/schedule-del
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { LayoutHeaderComponent } from './layout-header/layout-header.component';
 import { HomeContentComponent } from './Home/home-content/home-content.component';
-
+import { AuthRegistrationComponent } from './auth/auth-registration/auth-registration.component';
+import { AuthLoginComponent } from './auth/auth-login/auth-login.component';
+import { AuthLogoutComponent } from './auth/auth-logout/auth-logout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -101,6 +105,10 @@ import { HomeContentComponent } from './Home/home-content/home-content.component
     MainLayoutComponent,
     LayoutHeaderComponent,
     HomeContentComponent,
+    AuthRegistrationComponent,
+    AuthLoginComponent,
+    AuthLogoutComponent,
+  
 
    
     
