@@ -30,8 +30,11 @@ import { AuthGuard } from './Services/auth-guard.service';
 import { AuthRegistrationComponent } from './auth/auth-registration/auth-registration.component';
 import { AuthLoginComponent } from './auth/auth-login/auth-login.component';
 const routes: Routes = [
- {path:'',component:MainLayoutComponent ,children:[
-      {path:'Home',component:HomeComponent,canActivateChild:[AuthGuard],children:[
+ {path:'',component:MainLayoutComponent },
+ {path:'regx',component:AuthRegistrationComponent},
+ {path:'login',component:AuthLoginComponent},
+
+      {path:'',component:HomeComponent,canActivateChild:[AuthGuard],children:[
         {path:'Hospitals', component: HospitalGetAllsComponent },
         {path:'Hospitals/Post',component:HospitalPostComponent},
         {path:'Hospitals/getById/:id',component:HospitalGetByIdComponent},
@@ -54,11 +57,6 @@ const routes: Routes = [
         {path:'Nurses/update/:id',component:NurseUpdateComponent},
         {path:'Nurses/delete/:id',component:NurseDeleteComponent},
       
-      
-      
-      
-    
-      
         {path:'Doctors',component:DoctorGetAllComponent},
         {path:'Doctors/Post',component:DoctorPostComponent},
         {path:'Doctors/getById/:id',component:DoctorGetByIdComponent},
@@ -68,13 +66,7 @@ const routes: Routes = [
 
       ]},
 
-
-
-  ]},
-  {path:'regx',component:AuthRegistrationComponent},
-  {path:'login',component:AuthLoginComponent},
-  {path:'**',component:HomeComponent},
- 
+      {path:'**',component:HomeComponent},
 
 ];
 

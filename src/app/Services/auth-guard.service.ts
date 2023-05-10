@@ -6,12 +6,13 @@ import { AuthService } from './auth.service';
 })
 export class AuthGuard implements CanActivateChild {
  constructor(private authService: AuthService, private router: Router) { }
- canActivateChild(): boolean {
- if (this.authService.isAuthenticated()) {
- return true;
- } else {
- this.router.navigate(['/login']);
- return false;
- }
+  canActivateChild(): boolean {
+    if (!this.authService.isAuthenticated()) {
+    return true;
+  }
+    else {
+    this.router.navigate(['/login']);
+    return false;
+  }
  }
 }

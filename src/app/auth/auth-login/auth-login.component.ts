@@ -11,10 +11,11 @@ import { AuthService } from 'src/app/Services/auth.service';
 export class AuthLoginComponent {
   user:AuthLogIn=new AuthLogIn();
   showPassword = false;
-  constructor( private auth:AuthService,route:Router){}
+  constructor( private auth:AuthService,private route:Router){}
   onSubmit() {
     return this.auth.login(this.user).subscribe(data=>{
       this.user=data;
+      this.route.navigateByUrl(`/Home`);
     })
   
 

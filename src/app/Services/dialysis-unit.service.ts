@@ -24,7 +24,7 @@ export class DialysisUnitService {
     return this.http.post<DialysisUnit>(`${this.apiUrl}`,dialysis);
   }
 
-  updateDialysisUnit(unit: DialysisUnit): Observable<DialysisUnit> {
+  updateDialysisUnit(unit: DialysisUnit,id:number): Observable<DialysisUnit> {
     return this.http.put<DialysisUnit>(`${this.apiUrl}/${unit.dialysisUnitId}`, unit);
   }
 

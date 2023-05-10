@@ -59,6 +59,7 @@ import { HomeContentComponent } from './Home/home-content/home-content.component
 import { AuthRegistrationComponent } from './auth/auth-registration/auth-registration.component';
 import { AuthLoginComponent } from './auth/auth-login/auth-login.component';
 import { AuthLogoutComponent } from './auth/auth-logout/auth-logout.component';
+import { AuthInterceptor } from './Services/auth-interceptor.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -126,9 +127,9 @@ import { AuthLogoutComponent } from './auth/auth-logout/auth-logout.component';
   
   ],
   providers: [
-    { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
- JwtHelperService,
- //{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
+  JwtHelperService,
+ { provide: HTTP_INTERCEPTORS, useClass:AuthInterceptor , multi: true }
 
 
   ],

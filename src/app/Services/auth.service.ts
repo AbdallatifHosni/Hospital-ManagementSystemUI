@@ -4,12 +4,14 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { AuthLogIn } from '../Models/auth-log-in';
+import { UserToken } from '../Models/user-token';
 @Injectable({
  providedIn: 'root'
 })
 export class AuthService {
   private apiUrl = `http://abdallatifhossni-001-site1.htempurl.com/api/Accounts/token`;
   private jwtHelper = new JwtHelperService();
+  usertoken :UserToken=new UserToken();
 
   constructor(private http: HttpClient) {}
 
@@ -18,7 +20,7 @@ export class AuthService {
     .pipe(
       map((response: any) => {
         const token = response.token;
-        localStorage.setItem('access_token', token);
+        localStorage.setItem('access_token',this.usertoken.token);
         return token;
       })
     );
@@ -30,7 +32,7 @@ export class AuthService {
 
   isAuthenticated(): boolean {
     const token = localStorage.getItem('access_token');
-    return !this.jwtHelper.isTokenExpired(token);
+    return !this.jwtHelper.isTokenExpired(this.usertoken.token);
   }
 
   getToken(): string {

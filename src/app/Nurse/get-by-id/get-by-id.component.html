@@ -1,1 +1,23 @@
 <p>get-by-id works!</p>
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{nurse.name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">ID: {{nurse.id}}</h6>
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="card-text">Email: {{nurse.email}}</p>
+        </div>
+        <div class="col-sm-6">
+          <p class="card-text">Phone: {{nurse.phone}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="card-text">Gender: {{nurse.gender === 0 ? 'Male' : nurse.gender === 1 ? 'Female' : 'Other'}}</p>
+        </div>
+        <div class="col-sm-6">
+          <p class="card-text">Dialysis Unit ID: {{nurse.dialysisUnitId}}</p>
+        </div>
+      </div>
+    </div>
+  </div>

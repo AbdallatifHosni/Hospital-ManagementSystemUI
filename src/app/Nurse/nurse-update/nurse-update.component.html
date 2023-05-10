@@ -1,1 +1,33 @@
 <p>nurse-update works!</p>
+<h2>update  Nurse</h2>
+<form #nurseForm="ngForm" (ngSubmit)="update()">
+  <div class="form-group">
+    <label for="id">ID:</label>
+    <input type="text" class="form-control" id="id" name="id" [(ngModel)]="unrse.id">
+  </div>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="unrse.name" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="unrse.email" required email>
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone:</label>
+    <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="unrse.phone" required>
+  </div>
+  <div class="form-group">
+    <label for="gender">Gender:</label>
+    <select class="form-control" id="gender" name="gender" [(ngModel)]="unrse.gender">
+      <option value="0">Male</option>
+      <option value="1">Female</option>
+      <option value="2">Other</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="dialysisUnitId">Dialysis Unit ID:</label>
+    <input type="text" class="form-control" id="dialysisUnitId" name="dialysisUnitId" [(ngModel)]="unrse.dialysisUnitId">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

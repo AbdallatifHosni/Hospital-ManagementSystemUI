@@ -1,20 +1,31 @@
 <p>auth-login works!</p>
-<form (ngSubmit)="onSubmit()">
-    <div class="mb-3">
-      <label for="email" class="form-label">Email:</label>
-      <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email" required>
+<div class="container ">
+  <div class="row   ">
+    <div class="">
     </div>
-    <div class="mb-3">
-      <label for="password" class="form-label">Confirm Password:</label>
-      <div class="input-group">
-        <input type="{{showPassword ? 'text' : 'password'}}" class="form-control" id="password" name="password" [(ngModel)]="user.password" required>
-        <button type="button" class="btn btn-outline-secondary" (click)="toggleShowPassword()">
-          <span *ngIf="showPassword">Hide</span>
-          <span *ngIf="!showPassword">Show</span>
-        </button>
-      </div>
+    <div class=" ">
+      <form (ngSubmit)="onSubmit()" >
+        <div class="mb-3">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password:</label>
+          <div class="input-group">
+            <input type="{{showPassword ? 'text' : 'password'}}" class="form-control" id="password" name="password" [(ngModel)]="user.password" required>
+            <button type="button" class="btn btn-outline-secondary" (click)="toggleShowPassword()">
+              <span *ngIf="showPassword">Hide</span>
+              <span *ngIf="!showPassword">Show</span>
+            </button>
+          </div>
+        </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-primary">Log In</button>
+        </div>
+      </form>
     </div>
-    <div class="mb-3">
-      <button type="submit" class="btn btn-primary">Log In</button>
-    </div>
-  </form>
+
+
+  </div>
+
+</div>
