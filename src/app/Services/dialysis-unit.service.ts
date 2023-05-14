@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class DialysisUnitService {
 
   //http://abdallatifhossni-001-site1.htempurl.com/api
-  private apiUrl = "http://abdallatifhossni-001-site1.htempurl.com/api/DialysisUnits";
+  private apiUrl = "http://abdallatifhossni-001-site1.etempurl.com/api/DialysisUnits";
 
   constructor(private http: HttpClient) {}
 

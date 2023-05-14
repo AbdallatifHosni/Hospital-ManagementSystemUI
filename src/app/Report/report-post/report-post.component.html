@@ -18,16 +18,11 @@
           <option value="type2">Type 2</option>
           <option value="type3">Type 3</option>
         </select>
-
-        <div>
-          <label for="photo">Photo</label>
-          <input type="file" id="photo" name="file">
-        </div>
       <div>
         <label for="file-input">Choose a file to upload:</label>
         <input type="file" id="file-input" name="file-input" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required >
       </div>
-      <button type="submit">Upload</button>
+      <button type="submit" (onClick)="uploadFile()">Upload</button>
       </div>
       <div class="mb-3">
         <label for="doctorId" class="form-label">Doctor ID</label>
