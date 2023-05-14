@@ -7,6 +7,7 @@ export class Report {
         public reportType:string='',
         public doctorId :number=0,
         public patientId:number=0,
+        //public selectedFile:File|any|null,
 
 
     ){}

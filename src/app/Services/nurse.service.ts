@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class NurseService {
 
-  ApiUrl='http://abdallatifhossni-001-site1.htempurl.com/api/Nurses'
+  ApiUrl='http://abdallatifhossni-001-site1.etempurl.com/api/Nurses'
   constructor(private http:HttpClient ) { }
 
   getAllNurse():Observable<Nurse[]>{

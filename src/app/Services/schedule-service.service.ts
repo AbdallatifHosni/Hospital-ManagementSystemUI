@@ -7,7 +7,7 @@ import { Schedule } from '../Models/schedule';
   providedIn: 'root'
 })
 export class ScheduleServiceService {
-  ApiUrl='http:// abdallatifhossni-001-site1.htempurl.com/api/Scheduls';
+  ApiUrl='http://abdallatifhossni-001-site1.etempurl.com/api/Scheduls';
 
   constructor(private http:HttpClient) { }
   GetAllSchedule():Observable<Schedule[]>{

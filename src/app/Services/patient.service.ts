@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class PatientService {
  constructor(private http: HttpClient) { }
- ApiUrl='http://abdallatifhossni-001-site1.htempurl.com/api/Patients';
+ ApiUrl='http://abdallatifhossni-001-site1.etempurl.com/api/Patients';
 
   getPatients(): Observable<Patient[]> {
     return this.http.get<Patient[]>(`${this.ApiUrl}`);

@@ -1,6 +1,5 @@
 
 
-
 import { FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -60,6 +59,7 @@ import { AuthRegistrationComponent } from './auth/auth-registration/auth-registr
 import { AuthLoginComponent } from './auth/auth-login/auth-login.component';
 import { AuthLogoutComponent } from './auth/auth-logout/auth-logout.component';
 import { AuthInterceptor } from './Services/auth-interceptor.service';
+import { MapComponentComponent } from './map-component/map-component.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -109,6 +109,7 @@ import { AuthInterceptor } from './Services/auth-interceptor.service';
     AuthRegistrationComponent,
     AuthLoginComponent,
     AuthLogoutComponent,
+    MapComponentComponent,
   
 
    

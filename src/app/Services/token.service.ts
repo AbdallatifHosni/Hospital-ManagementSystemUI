@@ -10,6 +10,6 @@ export class TokenService {
 token:GetToken =new GetToken();
   constructor(private http:HttpClient) { }
   GetToken():Observable<any>{
-    return this.http.get(`http:// abdallatifhossni-001-site1.htempurl.com/api/Accounts/token`);
+    return this.http.get(`http://abdallatifhossni-001-site1.etempurl.com/api/Accounts/token`);
   }
 }

@@ -29,6 +29,11 @@ import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { AuthGuard } from './Services/auth-guard.service';
 import { AuthRegistrationComponent } from './auth/auth-registration/auth-registration.component';
 import { AuthLoginComponent } from './auth/auth-login/auth-login.component';
+import { ReportPostComponent } from './Report/report-post/report-post.component';
+import { ReportGetByIdComponent } from './Report/report-get-by-id/report-get-by-id.component';
+import { ReportUpdateComponent } from './Report/report-update/report-update.component';
+import { ReportDeleteComponent } from './Report/report-delete/report-delete.component';
+import { ReportGetAllComponent } from './Report/report-get-all/report-get-all.component';
 const routes: Routes = [
  {path:'',component:MainLayoutComponent },
  {path:'regx',component:AuthRegistrationComponent},
@@ -62,6 +67,12 @@ const routes: Routes = [
         {path:'Doctors/getById/:id',component:DoctorGetByIdComponent},
         {path:'Doctors/update/:id',component:DoctorUpdateComponent},
         {path:'Doctors/delete/:id',component:DoctorDeleteComponent},
+
+        {path:'Reports',component:ReportGetAllComponent},
+        {path:'Reports/Post',component:ReportPostComponent},
+        {path:'Reports/getById/:id',component:ReportGetByIdComponent},
+        {path:'Reports/update/:id',component:ReportUpdateComponent},
+        {path:'Reports/delete/:id',component:ReportDeleteComponent}
 
 
       ]},

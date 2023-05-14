@@ -1,1 +1,42 @@
 <p>report-post works!</p>
+<div class="container">
+    <h1>Report Form</h1>
+    <form (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="reportName" class="form-label">Report Name</label>
+        <input type="text" class="form-control" id="reportName" name="reportName" [(ngModel)]="report.reportName" required>
+      </div>
+      <div class="mb-3">
+        <label for="reportDescription" class="form-label">Report Description</label>
+        <textarea class="form-control" id="reportDescription" name="reportDescription" rows="3" [(ngModel)]="report.reportDescription"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="reportType" class="form-label">Report Type</label>
+        <select class="form-select" id="reportType" name="reportType" [(ngModel)]="report.reportType" required>
+          <option value="">Select a type</option>
+          <option value="type1">Type 1</option>
+          <option value="type2">Type 2</option>
+          <option value="type3">Type 3</option>
+        </select>
+
+        <div>
+          <label for="photo">Photo</label>
+          <input type="file" id="photo" name="file">
+        </div>
+      <div>
+        <label for="file-input">Choose a file to upload:</label>
+        <input type="file" id="file-input" name="file-input" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required >
+      </div>
+      <button type="submit">Upload</button>
+      </div>
+      <div class="mb-3">
+        <label for="doctorId" class="form-label">Doctor ID</label>
+        <input type="number" class="form-control" id="doctorId" name="doctorId" [(ngModel)]="report.doctorId" required>
+      </div>
+      <div class="mb-3">
+        <label for="patientId" class="form-label">Patient ID</label>
+        <input type="number" class="form-control" id="patientId" name="patientId" [(ngModel)]="report.patientId" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+ </div>

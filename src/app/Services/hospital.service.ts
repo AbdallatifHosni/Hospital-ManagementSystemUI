@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HospitalService {
-  ApiUrl :string='http://abdallatifhossni-001-site1.htempurl.com/api/Hospitals';
+  ApiUrl :string='http://abdallatifhossni-001-site1.etempurl.com/api/Hospitals';
   constructor(public http: HttpClient) { }
 
   getHospitals(): Observable<Hospital[]> {

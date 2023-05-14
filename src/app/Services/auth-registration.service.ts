@@ -7,7 +7,7 @@ import { AuthRegister } from '../Models/auth-register';
 })
 export class AuthRegistrationService {
 
-  private registerUrl = 'http://abdallatifhossni-001-site1.htempurl.com/api/Accounts/register';
+  private registerUrl = 'http://abdallatifhossni-001-site1.etempurl.com/api/Accounts/register';
 
   constructor(private http: HttpClient) { }
 

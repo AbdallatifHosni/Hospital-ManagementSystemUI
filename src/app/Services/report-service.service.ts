@@ -7,7 +7,7 @@ import { Report } from '../Models/report';
   providedIn: 'root'
 })
 export class ReportServiceService {
- ApiUrl='http:// abdallatifhossni-001-site1.htempurl.com/api/Reports'
+ ApiUrl='http://abdallatifhossni-001-site1.etempurl.com/api/Reports'
   constructor(private http:HttpClient) { }
   GetAllReports():Observable<Report[]>{
 
